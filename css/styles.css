@@ -1,0 +1,63 @@
+body {
+  padding: 0;
+  margin: 40px 0;
+  font-size: 14px;
+  font-family: "Arial", sans-serif;
+  background: rgb(153, 230, 255) url("../img/back.jpg") 50% 50% no-repeat;
+}
+
+.wrapper {
+  width: 480px;
+  margin: auto;
+  padding: 36px;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+}
+
+h1, h2, h3, ul p {
+  color: rgb(38, 53, 85);
+}
+
+h1, h2 {
+  font-size: 25px;
+  font-family: "RGO", sans-serif;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+p {
+  color: rgb(78, 80, 80);
+}
+
+ul {
+  padding: 10px;
+  list-style: none;
+  vertical-align: top;
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+}
+
+.first-part {
+  margin-bottom: 40px;
+}
+
+.second-part::after {
+  content: "";
+  width: 100%;
+  margin: 30px auto;
+  display: block;
+  border: 1px solid rgb(211, 211, 211);
+}
+
+@font-face {
+  font-family: "RGO";
+  font-style: normal;
+  font-weight: 400;
+  src: local(PathwayGothicOne-Regular),
+  url("../fonts/PathwayGothicOne-Regular.ttf");
+}
