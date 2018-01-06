@@ -35,3 +35,13 @@ ul li a {
 ul li:hover span {
   text-shadow: 0 0 30px #000;
 }
+
+ul.github {
+  margin-top: 60px;
+  position: relative;
+  left: -40px;
+}
+
+ul.github a {
+  color: #d3d3d3;
+}
