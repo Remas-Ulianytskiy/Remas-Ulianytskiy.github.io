@@ -2,7 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Pathway Gothic One", sans-serif;
-  background: #aedbf0 url("../img/background.jpg") 50% 50% no-repeat;
+  background: url("../img/background.jpg") 50% 50% no-repeat;
+  background-size: cover;
 }
 
 .wrapper {
@@ -103,20 +104,24 @@ ul.submenu::before {
 /* MAIN */
 main {
   display: flex;
+  justify-content: space-between;
   background: #fff;
-  padding: 20px 40px;
+  padding: 20px 60px 80px;
+}
+
+main h2 {
+  color: #263555;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
 
 main div.main {
  flex-basis: 70%;
- /*  */
- border: 1px solid red;
 }
 
 main div.aside {
-  flex-basis: 30%;
-  /*  */
-  border: 1px solid red;
+  flex-basis: 20%;
 }
 
 main div.main div {
@@ -126,51 +131,127 @@ main div.main div {
 }
 
 main iframe {
-  width: 480px;
-  height: 400px;
+  width: 460px;
+  height: 450px;
 }
 
 /* table */
+table {
+  width: 180px;
+  margin: 0 0 0 30px;
+  border-collapse: collapse;
+}
+
+table caption {
+  font-size: 17px;
+  text-align: left;
+  margin-bottom: 8px;
+  margin-left: 3px;
+}
+
+table td {
+  padding: 2px;
+}
+
+table td:first-child {
+  text-align: left;
+}
+
+table td:last-child {
+  text-align: right;
+}
+
+table td:only-child {
+  text-align: left;
+}
+
+table a {
+  color: #000;
+}
+
+table td[colspan="2"] a {
+  color: #fa7e7e;
+}
+
 div.table {
+  height: 310px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  /*  */
-  border: 1px solid red;
-  max-height: 280px;
 }
 
-
-
-/*  */
-table {
-  border: 1px solid red;
+/* ASIDE form */
+div.aside {
+  position: relative;
 }
 
+div.aside > a {
+  right: -42px;
+  bottom: -65px;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-radius: 50%;
+  background: #38afe5 url("../img/arrow-up.png") 50% 50% no-repeat;
+}
 
+form input {
+  width: 190px;
+  height: 18px;
+  margin-bottom: 15px;
+  display: block;
+}
 
+form input[placeholder]::-webkit-input-placeholder {
+  padding: 5px;
+  color: #263555;
+}
 
+form textarea[placeholder]::-webkit-input-placeholder {
+  padding: 5px;
+  font-size: 16px;
+  color: #263555;
+}
 
+form textarea {
+  min-width: 190px;
+  max-width: 190px;
+  min-height: 260px;
+  max-height: 260px;
+  margin-bottom: 15px;
+}
 
+form div {
+  position: relative;
+}
 
+form button {
+  width: 60px;
+  height: 24px;
+  margin-left: 20px;
+  border-radius: 8px;
+  border: 1px solid #A9A9A9;
+  position: absolute;
+}
 
+form button:first-child {
+  right: 90px;
+}
 
+form button:last-child {
+  right: 0px;
+}
 
-
-
-
-
-
-
-
-
-
+form button:hover {
+  width: 64px;
+  height: 25px;
+}
 
 /* FOOTER */
 footer > div:first-child {
   display: flex;
-  padding: 20px 40px 12px;
-  align-items: baseline;
+  padding: 12px 40px 12px;
+  align-items: center;
   justify-content: space-around;
   background: #30455b;
 }
