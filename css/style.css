@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/TheWitcher3.jpg");
+  font-family: "Pathway Gothic One", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li a {
+  font-size: 20px;
+  /*text-decoration: none;*/
+}
+
+ul li:first-child {
+  font-size: 24px;
+}
