@@ -10,6 +10,7 @@ body {
 div.wrapper {
   margin: 20px 10px;
   display: inline-block;
+  position: relative;
 }
 
 ul {
@@ -36,12 +37,12 @@ ul li:hover span {
   text-shadow: 0 0 30px #000;
 }
 
-ul.github {
+ul.source {
   margin-top: 60px;
-  position: relative;
-  left: -40px;
+  position: absolute;
+  bottom: -65vh;
 }
 
-ul.github a {
+ul.source a {
   color: #d3d3d3;
 }
