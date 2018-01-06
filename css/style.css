@@ -7,15 +7,30 @@ body {
   font-family: "Pathway Gothic One", sans-serif;
 }
 
+div.wrapper {
+  margin: 20px 10px;
+  display: inline-block;
+}
+
 ul {
   list-style: none;
 }
 
-ul li a {
-  font-size: 20px;
-  /*text-decoration: none;*/
+ul li {
+  margin: 5px 0;
 }
 
-ul li:first-child {
-  font-size: 24px;
+ul li h2 {
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+ul li a {
+  color: #fff;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+ul li:hover span {
+  text-shadow: 0 0 30px #000;
 }
