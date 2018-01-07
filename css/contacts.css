@@ -1,30 +1,21 @@
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Pathway Gothic One", sans-serif;
   background: url("../img/background.jpg") 50% 50% no-repeat;
-  background-size: cover;
 }
 
 .wrapper {
   width: 1024px;
   margin: 0 auto 40px;
-  padding: 0;
   box-sizing: border-box;
-}
-
-.wrapper a {
-  text-decoration: none;
 }
 
 /* HEADER */
 header {
-  padding: 0 60px 0 40px;
+  padding: 40px 60px 50px 40px;
 }
 
 .menu {
   display: flex;
-  list-style: none;
   align-items: center;
   justify-content: space-around;
 }
@@ -106,7 +97,7 @@ main {
   display: flex;
   justify-content: space-between;
   background: #fff;
-  padding: 20px 60px 80px;
+  padding: 80px 60px 60px;
 }
 
 main h2 {
@@ -187,7 +178,7 @@ div.aside {
 
 div.aside > a {
   right: -42px;
-  bottom: -65px;
+  bottom: -45px;
   width: 25px;
   height: 25px;
   position: absolute;
@@ -250,7 +241,7 @@ form button:hover {
 /* FOOTER */
 footer > div:first-child {
   display: flex;
-  padding: 12px 40px 12px;
+  padding: 25px 40px;
   align-items: center;
   justify-content: space-around;
   background: #30455b;
@@ -264,20 +255,20 @@ footer div.nav {
 
 footer div.nav a {
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
-  margin: 2px 0;
+  margin: 4px 0;
 }
 
-footer div.nav p {
+footer div.nav span {
   color: #fff;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   margin: 0 0 0px;
 }
 
 footer div.contacts a {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 footer div.contacts a:last-child {
@@ -294,7 +285,7 @@ footer div.social {
 footer div.social a {
   width: 40px;
   height: 40px;
-  margin: 10px 5px;
+  margin: 10px 5px 25px;
   border-radius: 50%;
 }
 
