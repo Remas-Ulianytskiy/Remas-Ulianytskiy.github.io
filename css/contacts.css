@@ -108,11 +108,14 @@ main h2 {
 }
 
 main div.main {
- flex-basis: 70%;
+ flex-basis: 76%;
+ padding-right: 30px;
+ box-sizing: border-box;
 }
 
 main div.aside {
-  flex-basis: 20%;
+  flex-basis: 24%;
+  box-sizing: border-box;
 }
 
 main div.main div {
@@ -129,7 +132,6 @@ main iframe {
 /* table */
 table {
   width: 180px;
-  margin: 0 0 0 30px;
   border-collapse: collapse;
 }
 
