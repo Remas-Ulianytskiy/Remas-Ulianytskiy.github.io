@@ -100,11 +100,17 @@ main {
 }
 
 main div.main {
-  flex-basis: 76%
+  flex-basis: 78%;
+  box-sizing: border-box;
+  /*  */
+  /* border: 1px solid red; */
 }
 
 main div.aside {
-  flex-basis: 24%;
+  flex-basis: 22%;
+  box-sizing: border-box;
+  /*  */
+  /* border: 1px solid red; */
 }
 
 main h2 {
@@ -193,8 +199,8 @@ form select {
 }
 
 form textarea {
-  min-width: 210px;
-  max-width: 210px;
+  min-width: 192px;
+  max-width: 192px;
   min-height: 40px;
   max-height: 40px;
   margin-bottom: 20px;

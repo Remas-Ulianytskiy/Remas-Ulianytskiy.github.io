@@ -95,26 +95,25 @@ ul.submenu::before {
 /* MAIN */
 main {
   display: flex;
-  justify-content: space-between;
   background: #fff;
   padding: 80px 60px 60px;
 }
 
 main h2 {
   color: #263555;
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 400;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 main div.main {
- flex-basis: 76%;
- padding-right: 30px;
+ flex-basis: 78%;
+ padding-right: 28px;
  box-sizing: border-box;
 }
 
 main div.aside {
-  flex-basis: 24%;
+  flex-basis: 22%;
   box-sizing: border-box;
 }
 
@@ -131,7 +130,7 @@ main iframe {
 
 /* table */
 table {
-  width: 180px;
+  width: 190px;
   border-collapse: collapse;
 }
 
