@@ -7,6 +7,7 @@ ul, li {
 body {
   font-family: "Pathway Gothic One", sans-serif;
   background: url("../img/background.jpg") no-repeat;
+  background-size: cover;
 }
 
 .wrapper {
@@ -110,58 +111,113 @@ ul.submenu::before {
 }
 
 /* MAIN */
-main {
-  padding: 20px;
+.main {
+  padding: 20px 0;
   background: #fff;
 }
 
-h2 {
-  font-size: 24px;
-}
-.content {
-  position: relative;
-  padding-bottom: 10px;
-}
-
-.gallery-item {
-  margin-bottom: 10px;
+.main > div {
+  margin-bottom: 20px;
   position: relative;
 }
 
-.gallery-item,
-.gallery-item img {
+.main > div:nth-child(2)::after {
+  content: "";
   width: 100%;
-  max-width: 420px;
+  display: block;
+  border: 1px solid #dedbdb;
+}
+
+h2 {
+  color: #263555;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: #263555;
+  font-size: 19px;
+}
+
+.image-one,
+.image-two {
+  width: 100%;
+  float: left;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.aside-list li {
+  position: relative;
+}
+
+.aside-list li::before {
+  content: "1";
+  width: 26px;
+  height: 26px;
+  left: -32px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  border-radius: 50%;
+  background: #38afe5;
+  border: 1px solid #3c97c2;
+}
+
+.aside-list li:nth-child(2)::before {
+  content: "2";
+}
+
+.aside-list li:nth-child(3)::before {
+  content: "3";
+}
+
+.footer-list {
+  padding-left: 20px;
+}
+
+.footer-list li {
+  margin: 2px 0;
+  list-style: url("../img/arrow-right.png");
+}
+
+/* MAIN quote */
+.quote {
+  width: 240px;
+  padding: 10px;
+  margin: 0 auto 40px;
+  position: relative;
+  border-radius: 2px;
+  background: #fcfafa;
+  border: 1px solid #dfdcdc;
+}
+
+.quote::before, .quote::after {
+  content: "";
+  left: 100px;
+  bottom: -50px;
+  position: absolute;
+  border: 20px solid transparent;
+  border-top: 30px solid #dfdcdc;
+}
+
+.quote::after {
+  bottom: -49px;
+  border-top: 30px solid #fcfafa;
+}
+
+.align {
+  text-align: center;
 }
 
 .to-top {
-  right: -17px;
-  bottom: -17px;
+  right: 8px;
+  bottom: -34px;
   width: 25px;
   height: 25px;
   position: absolute;
   border-radius: 50%;
   background: #38afe5 url("../img/arrow-up.png") 50% 50% no-repeat;
-}
-
-/* MAIN img hover */
-.gallery-item:hover img {
-  cursor: zoom-in;
-  filter: brightness(.6);
-}
-
-.gallery-item::before {
-  content: url(../img/zoom-in.svg);
-  filter: brightness(.8);
-  position: absolute;
-  z-index: 10;
-  left: 45%;
-  top: 40%;
-  display: none;
-}
-
-.gallery-item:hover::before {
-  display: block;
 }
 
 /* FOOTER */
@@ -170,7 +226,7 @@ h2 {
 }
 
 div.list {
-  padding: 10px 20px;
+  padding: 20px 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -258,18 +314,35 @@ footer a[target="_blank"]:hover {
 }
 
 @media screen and (min-width: 0px) {
-  .gallery > div:nth-last-of-type(-n+3) {
+  .image-two {
     display: none;
   }
 }
 
 @media screen and (min-width: 480px) {
-  ul.submenu {
-    left: 30px;
+  .footer-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 150px;
   }
 
-  div.list {
-    padding: 10px 40px;
+  .footer {
+    padding: 0 25px;
+  }
+
+  ul.submenu {
+    left: 33px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .image-one {
+    display: none;
+  }
+
+  .image-two {
+    display: inherit;
   }
 }
 
@@ -281,9 +354,48 @@ footer a[target="_blank"]:hover {
     line-height: 110px;
   }
 
-  .gallery > div:nth-child(7),
-  .gallery > div:nth-child(8) {
-    display: inherit;
+  .menu-item a {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .image-two {
+    width: 406px;
+    margin-right: 10px;
+  }
+
+  .aside-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .aside-list li {
+    width: 180px;
+  }
+
+  .quote {
+    width: auto;
+  }
+
+  .quote::before, .quote::after {
+    left: 55px;
+  }
+
+  div.list {
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  div.nav a {
+    font-size: 16px;
+  }
+
+  div.contacts {
+    width: auto;
+    flex-direction: column;
   }
 
   div.contacts a {
@@ -347,25 +459,28 @@ footer a[target="_blank"]:hover {
   }
 
   h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 27px;
   }
 
-  .gallery > div:nth-child(9) {
-    display: inherit;
+  h3 {
+    font-size: 23px;
   }
 
-  div.list {
-    align-items: center;
-    justify-content: space-around;
+  p {
+    font-size: 19px;
   }
 
-  div.nav a {
-    font-size: 16px;
+  .image-two {
+    width: 550px;
+    margin-right: 20px;
   }
 
-  div.contacts {
-    width: auto;
-    flex-direction: column;
+  .quote::before, .quote::after {
+    left: 86px;
+  }
+
+  .footer-list {
+    height: 155px;
+    font-size: 18px;
   }
 }
