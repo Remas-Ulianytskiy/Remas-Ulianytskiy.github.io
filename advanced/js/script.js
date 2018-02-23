@@ -1,32 +1,23 @@
-// rows of keyboard
-const firstRow = 'qwertyuiop[]';
-const secondRow = 'asdfghjkl;\'';
-const thirdRow = 'zxcvbnm,./';
+// first task
+const alphabet = 'qwertyuiopasdfghjklzxcvbnm';
 
-// keyboard array
-const keyboard = [firstRow, secondRow, thirdRow];
+function addKeyboard(parameter) {
+  const firstRow = parameter.slice(0, 10);
+  const secondRow = parameter.slice(10, 19);
+  const thirdRow = parameter.slice(19, 28);
 
-// index constructor
-const hello = (
-  keyboard[1][5] + keyboard[0][2]
-  + keyboard[1][8] + keyboard[1][8]
-  + keyboard[0][8]
-);
+  return [firstRow, secondRow, thirdRow];
+}
 
-const javascript = (
-  keyboard[1][6] + keyboard[1][0]
-  + keyboard[2][3] + keyboard[1][0]
-  + keyboard[1][1] + keyboard[2][2]
-  + keyboard[0][3] + keyboard[0][7]
-  + keyboard[0][9] + keyboard[0][4]
-);
+const keyboard = addKeyboard(alphabet);
 
-const trainer = (
-  keyboard[0][4] + keyboard[0][3]
-  + keyboard[1][0] + keyboard[0][7]
-  + keyboard[2][5] + keyboard[0][2]
-  + keyboard[0][3]
-);
+// second and third task
+function getRandomRow(min, max) {
+  const randomRow = Math.floor(Math.random() * (max - min)) + min;
+  const randomRowLenght = keyboard[randomRow].length;
+  const randomChar = Math.floor(0 + Math.random() * (randomRowLenght - 0));
 
-// result
-console.log(hello, javascript, trainer);
+  return keyboard[randomRow][randomChar];
+}
+
+console.log(getRandomRow(0, 3));
