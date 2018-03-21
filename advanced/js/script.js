@@ -1,33 +1,64 @@
-// first task
-const alphabet = 'qwertyuiopasdfghjklzxcvbnm';
+const keyboard = {
+  layouts: {
+    en: {
+      topRow: 'qwertyuiop',
+      middleRow: 'asdfghjkl',
+      bottomRow: 'zxcvbnm'
+    },
 
-function addKeyboard(parameter) {
-  const firstRow = parameter.slice(0, 10);
-  const secondRow = parameter.slice(10, 19);
-  const thirdRow = parameter.slice(19, 28);
+    ru: {
+      topRow: 'йцукенгшщзхъ',
+      middleRow: 'фывапролджэ',
+      bottomRow: 'ячсмитьбю'
+    },
 
-  return [firstRow, secondRow, thirdRow];
-}
+    ua: {
+      topRow: 'йцукенгшщзхї',
+      middleRow: 'фівапролджє',
+      bottomRow: 'ячсмитьбю'
+    }
+  },
 
-const keyboard = addKeyboard(alphabet);
+  langs: ['en', 'ru', 'ua'],
+  currentLang: ''
+};
 
-// second and third task
-function getRandomRow(min, max, min2) {
-  const randomRow = Math.floor(Math.random() * (max - min)) + min;
-  const randomRowLenght = keyboard[randomRow].length;
-  const randomChar = Math.floor(min2 + Math.random() * (randomRowLenght - min2));
+let correctValue = false;
 
-  return keyboard[randomRow][randomChar];
-}
+while (!correctValue) {
+  const choice = prompt(`
+    Please choose a language.
+    En-0, Ru-1, Ua-2
+  `);
 
-const randomChar = getRandomRow(0, 3, 0);
+  switch (choice) {
+    case '0': case '1': case '2':
+      keyboard.currentLang = keyboard.langs[choice];
+      alert(`You choose ${keyboard.currentLang}`);
+      console.log(`currentLang = ${keyboard.currentLang}`);
+      correctValue = true; break;
 
-console.log(`
-  First task result:
-  ${keyboard}
-`);
+    case null:
+      correctValue = true; break;
 
-console.log(`
-  Second and Third task result:
-  ${randomChar}
-`);
+    default:
+      alert('You choose an unavailable language.'); break;
+  };
+};
+
+function getRandCharInAlph(min, max, min2) {
+  const getRandRow = Math.floor(Math.random() * (max - min)) + min;
+  let randRow;
+
+  switch (getRandRow) {
+    case 0: randRow = keyboard.layouts[keyboard.currentLang].topRow; break;
+    case 1: randRow = keyboard.layouts[keyboard.currentLang].middleRow; break;
+    case 2: randRow = keyboard.layouts[keyboard.currentLang].bottomRow; break;
+  }
+
+  const randRowLenght = randRow.length;
+  const getRandChar = min2 + Math.floor(Math.random() * (randRowLenght - min2));
+  return randRow[getRandChar];
+};
+
+console.log(`random char: ${getRandCharInAlph(0, 3, 0)}`);
