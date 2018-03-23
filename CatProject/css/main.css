@@ -1,0 +1,174 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url("../font/Lato-Regular.ttf"); }
+
+@font-face {
+  font-family: 'Lato Bold';
+  src: url("../font/Lao-Bold.ttf"); }
+
+@font-face {
+  font-family: 'Quicksand Regular';
+  src: url("../font/Quicksand-Regular.ttf"); }
+
+@font-face {
+  font-family: 'Quicksand Bold';
+  src: url("../font/Quicksand-Bold.ttf"); }
+
+body {
+  background: #696969; }
+
+.wrapper {
+  width: 900px;
+  margin: 10px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1.4em;
+  background: #fff; }
+
+.bold {
+  font-weight: bold; }
+
+.text {
+  font-size: 18px;
+  font-family: "Lato Regular"; }
+
+.caption {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: "Quicksand Bold"; }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .header .photo-block {
+    -ms-flex-preferred-size: 36%;
+        flex-basis: 36%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: #326683;
+    border-right: 2px solid #808080; }
+  .header .photo {
+    width: 220px;
+    height: 220px;
+    margin: 15px auto 20px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    background: url("../img/profile_photo.jpg") 31% 0% no-repeat;
+    background-size: auto 120%; }
+  .header .nominal-block {
+    padding: 32px 0 32px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 64%;
+        flex-basis: 64%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .header .name {
+    font-size: 34px;
+    font-weight: bold;
+    font-family: sans-serif; }
+
+.content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .content-wrapper .list__item {
+    margin: 3px 0 3px 0; }
+    .content-wrapper .list__item:first-child {
+      margin: 0 0 3px 0; }
+    .content-wrapper .list__item:last-child {
+      margin: 3px 0 0 0; }
+  .content-wrapper .basic-info {
+    padding: 20px 10px 20px 30px;
+    -ms-flex-preferred-size: 36%;
+        flex-basis: 36%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background: #326683;
+    border-right: 2px solid #808080; }
+    .content-wrapper .basic-info__block {
+      margin: 0 0 60px;
+      position: relative; }
+    .content-wrapper .basic-info .caption {
+      color: #fff; }
+    .content-wrapper .basic-info .text {
+      font-size: 16px;
+      color: #fff; }
+  .content-wrapper .description {
+    padding: 20px;
+    -ms-flex-preferred-size: 64%;
+        flex-basis: 64%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .content-wrapper .description .experience__block {
+      margin: 0 0 30px; }
